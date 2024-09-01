@@ -1,0 +1,35 @@
+{
+    "fact_input_metrics_consolidated_filtered": {
+        "cell_name": "refers to a unique combination of business_unit, country, business_group, category, sub_category",
+        "business_unit_name": "refers to the geography e.g. Latin America, North America, Asia, ...",
+        "country_name": "refers to the country e.g. Brazil, Turkey, USA, ...",
+        "business_group_name": "refers to the different business lines of Unilever e.g. Beauty and Wellness",
+        "category_name": "refers to the product categories within the business group e.g. Hair Care, Hand & Body Lotion within Beauty and Wellness",
+        "subcategory_name": "refers to sub-categories within the product categories e.g. Conditioner, Shampoo within Hair Care",
+        "brand_name": "refers to the brand name. A brand can be present across multiple cells",
+        "brand_manufacturer": "has 2 values; 'UL' for a unilever brand and 'CR' for a competitor brand",
+        "global_brand_flag": "has 2 values (0/1) indicating if the brand has global presence across multiple countries and business units",
+        "max_quarter": "refers to the latest quarter wrt which the scores have been captured",
+        "pillar_name": "refers to the metric category e.g. Product or Pricing",
+        "metric_name": "refers to metrics within a pillar e.g. ProductSuperiority, PremiumPriceIndex",
+        "metric_importance": "refers to the significance of a metric in contributing to the brand ubs score. This importance is determined at a cell level and therefore the same value repeats for all the brands of a cell",
+        "raw_score_this_year": "refers to raw metric scores, collected from surveys or other means for current year same quarter",
+        "raw_score_last_year": "refers to raw metric scores, collected from surveys or other means for last year same quarter",
+        "norm_score_this_year": "refers to normalised versions of raw metric scores (normalisation done within a cell), for current year same quarter",
+        "norm_score_last_year": "refers to normalised versions of raw metric scores (normalisation done within a cell), for last year same quarter",
+        "ubs_score_this_year": "refers to normalised metric scores multiplied by metric importance, for current year same quarter",
+        "ubs_score_last_year": "refers to normalised metric scores multiplied by metric importance, for last year same quarter",
+        "cr_raw_score_this_year": "refers to raw metric scores of the equivalent competitor brand, for current year same quarter. Is NULL if the brand in brand_name is a competitor brand",
+        "cr_raw_score_last_year": "refers to raw metric scores of the equivalent competitor brand, for last year same quarter. Is NULL if the brand in brand_name is a competitor brand",
+        "cr_norm_score_this_year": "refers to normalised versions of raw metric scores of the equivalent competitor brand, for current year same quarter. Is NULL if the brand in brand_name is a competitor brand",
+        "cr_norm_score_last_year": "refers to normalised versions of raw metric scores of the equivalent competitor brand, for last year same quarter. Is NULL if the brand in brand_name is a competitor brand",
+        "cr_ubs_score_this_year": "refers to normalised metric scores of the equivalent competitor brand multiplied by metric importance, for current year same quarter. Is NULL if the brand in brand_name is a competitor brand",
+        "cr_ubs_score_last_year": "refers to normalised metric scores of the equivalent competitor brand multiplied by metric importance, for last year same quarter. Is NULL if the brand in brand_name is a competitor brand"
+    },
+    "fact_metric_drivers_filtered": {
+        "cell_name": "refers to a unique combination of business_unit, country, business_group, category, sub_category",
+        "metric_independent_variable": "refers to the metric which driving a second metric i.e. the dependent variable",
+        "metric_dependent_variable": "refers to the metric which is being driven by the first metric i.e. the independent variable",
+        "weight_estimate": "the linear regression coefficient showing the magnitude and the direction (+ve/-ve) of the relationship between the metrics" 
+    }
+}
